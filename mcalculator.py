@@ -113,7 +113,7 @@ def getDiffData(fileNames=[],fmt='pdfgui',writedata=False):
         else:
             print 'This format is not currently supported.'
 	
-def calculatemPDF(xyz, sxyz, calcList=np.array([0]), rstep=0.01, rmin=0.0, rmax=20.0, psigma=0.1,qmin=0,qmax=-1,dampRate=0.0,dampPower=2.0,maxextension=10.0):
+def calculatemPDF(xyz, sxyz, calcList=np.array([0]), rstep=0.01, rmin=0.0, rmax=20.0, psigma=0.15,qmin=0,qmax=-1,dampRate=0.0,dampPower=2.0,maxextension=10.0):
     """Calculate the normalized mPDF.
     
     At minimum, this module requires input lists of atomic positions and spins.
@@ -620,7 +620,7 @@ class mPDFcalculator:
             transform of magnetic form mactor.
 
         """
-    def __init__(self,unitcell=np.array([[1,0,0],[0,1,0],[0,0,1]]),atombasis=np.array([[0,0,0]]),atoms=np.array([]),rmaxAtoms=30.0,spins=np.array([]),svec=np.array([0,0,1]),kvec=np.array([0,0,0]),spinOrigin=np.array([0,0,0]),ffqgrid=np.array([]),ff=np.array([]),magIdxs=[0],calcList=np.array([0]),maxextension=10.0,gaussPeakWidth=0.1,dampRate=0.0,dampPower=2.0,qmin=-1.0,qmax=-1.0,rmin=0.0,rmax=20.0,rstep=0.01,ordScale=1.0/np.sqrt(2*np.pi),paraScale=1.0,rmintr=-5.0,rmaxtr=5.0,drtr=0.01):
+    def __init__(self,unitcell=np.array([[1,0,0],[0,1,0],[0,0,1]]),atombasis=np.array([[0,0,0]]),atoms=np.array([]),rmaxAtoms=30.0,spins=np.array([]),svec=np.array([0,0,1]),kvec=np.array([0,0,0]),spinOrigin=np.array([0,0,0]),ffqgrid=np.array([]),ff=np.array([]),magIdxs=[0],calcList=np.array([0]),maxextension=10.0,gaussPeakWidth=0.15,dampRate=0.0,dampPower=2.0,qmin=-1.0,qmax=-1.0,rmin=0.0,rmax=20.0,rstep=0.01,ordScale=1.0/np.sqrt(2*np.pi),paraScale=1.0,rmintr=-5.0,rmaxtr=5.0,drtr=0.01):
         self.unitcell=unitcell      
         self.atombasis=atombasis  
         self.atoms=atoms
