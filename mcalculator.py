@@ -6,7 +6,7 @@ from scipy.signal import fftconvolve, convolve
 import copy
 
 def jCalc(q,params=[0.2394,26.038,0.4727,12.1375,0.3065,3.0939,-0.01906],j2=False):
-    """Calculate the magnetic form factor j0.
+    """Calculate the magnetic form factor approximation j.
 
     This method for calculating the magnetic form factor is based on the
     approximate empirical forms based on the tables by Brown, consisting of
